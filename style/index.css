@@ -1,0 +1,436 @@
+@-webkit-keyframes fadeIn {
+    from { opacity: 0%; }
+    to { opacity: 100%; }
+}
+@keyframes fadeIn {
+    from { opacity: 0%; }
+    to { opacity: 100%; }
+}
+
+@-webkit-keyframes fadeOut {
+    from {height: 100%; opacity: 100%;}
+    to { height: 0%; opacity: 0%;}
+}
+@keyframes fadeOut {
+    from {height: 100%; opacity: 100%;}
+    to { height: 0%; opacity: 0%;}
+}
+
+@font-face {
+    font-family: "DavidsLimonade-Regular";
+    src: url("../fonts/DavidsLimonade-Regular.eot"); /* IE9 Compat Modes */
+    src: url("../fonts/DavidsLimonade-Regular.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+      url("../fonts/DavidsLimonade-Regular.otf") format("opentype"), /* Open Type Font */
+      url("../fonts/DavidsLimonade-Regular.svg") format("svg"), /* Legacy iOS */
+      url("../fonts/DavidsLimonade-Regular.ttf") format("truetype"), /* Safari, Android, iOS */
+      url("../fonts/DavidsLimonade-Regular.woff") format("woff"), /* Modern Browsers */
+      url("../fonts/DavidsLimonade-Regular.woff2") format("woff2"); /* Modern Browsers */
+    font-weight: normal;
+    font-style: normal;
+  }
+
+body{
+    background-image: url("../media/rotate.png");
+    background-size: cover; 
+    background-position: 55% 0%;
+    background-repeat: no-repeat;
+    font-family: 'Gochi Hand', cursive;
+}
+
+
+header{
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    align-items: center;
+    background-color: rgba(141,129,129,0.3);
+}
+
+header #logotype{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#logotype img{
+    width: 40%;
+}
+
+header .burger{
+    width: 100%;
+}
+header a{
+    justify-self: center;
+    width: 80%;
+}
+
+.masquer,#afficher:target .afficher,  #cool{ 
+    display:none;
+}
+
+#afficher:target .masquer {
+    display: block;
+}
+
+#afficher:target nav, #afficher:target nav a{
+    animation: fadeIn 1s;
+    -webkit-animation: fadeIn 1s;
+    height: 100%;
+}
+
+nav{
+    overflow: hidden;
+    background-color: rgba(141,129,129,0.3);
+    display: block;
+    animation: fadeOut 1s;
+    -webkit-animation: fadeOut 1s;
+    height: 0px;
+    text-align: center;
+}
+
+nav li{
+    list-style-type: none;
+}
+
+nav li a{
+    color: rgba(0,0,0,1);
+    font-size: 30px;
+    line-height: 40px;
+    font-family: 'DavidsLimonade-Regular';
+    text-decoration: none;
+}
+
+#stand{
+    margin: 5vw auto;
+    width: 80%;
+}
+
+#stand p{
+    font-size: 4vw;
+}
+
+#stand img{
+    width: 100%; 
+}
+
+#event iframe{
+    width: 100%;
+    height: 72vw;
+    border:0px solid black;
+    margin-bottom: 0;
+    display: block;
+    border-bottom-width: 3px;
+    grid-area: top;
+}
+#event .desc{
+    display: grid;
+    grid-template-rows: 72vw 72vw;
+    grid-template-areas: 
+                    "top" 
+                    "bottom" 
+                    "bottom";
+    flex-wrap: wrap;
+    justify-items: center;
+    background-color: rgba(141,129,129,0.5);
+    border:3px solid black;
+}
+
+#event button{
+    align-self: flex-end;
+    grid-area: bottom;
+    font-size: 5vw;
+    width: 75%;
+    height: 10vw;
+    margin-bottom: 5vw;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    background-image: url("../media/background_button.png");
+    background-size: 100% 100%;
+    font-family: 'Gochi Hand', cursive;
+}
+
+#event .desc .numero{
+    align-self: flex-end;
+    grid-area: bottom;
+    justify-self: flex-end;
+    width: auto;
+    margin: 0 2vw 0 0;
+}
+
+#event .desc p{
+    font-size: 4vw;
+    width: 90%;
+    grid-area: bottom;
+}
+
+#event i{
+    font-size: 10vw;
+    color: #fce800;
+    text-shadow: 1px 1px 2px black;
+}
+
+#event a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+#event button a{
+    color: black;
+}
+
+.event1, #event1:target .event1, #event2:target .event2, #event3:target .event3, #event4:target .event4, #event5:target .event5, #event6:target .event6, #event7:target .event7, 
+#event8:target .event8, #event9:target .event9,#event10:target .event10,#event11:target .event11,#event12:target .event12, #event13:target .event13,#event14:target .event14,#event15:target .event15
+{
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+    height: auto;
+    justify-items: center;
+}
+
+div:target .event1, .event2,.event3,.event4,.event5,.event6,.event7,.event8,.event9,.event10,.event11,.event12,.event13,.event14,.event15 {
+    display: none;
+}
+
+#inscription{
+    margin: 5vw auto 0px;
+    background-image: url("../media/background_form.png");
+    background-size: 100% 100%;
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#inscription button{
+    align-self: flex-end;
+    grid-area: bottom;
+    font-size: 5vw;
+    width: 75%;
+    margin-bottom: 5vw;
+    height: 8vw;
+    color: black;
+}
+
+#inscription .checkbox{
+    width: 80%;
+    font-size: 3vw;
+    margin: 1vw 0;
+}
+.checkbox p{
+    margin-block-start: 0vw;
+    margin-block-end: 0vw;
+}
+
+.bigcase input{
+    width: 40%;
+}
+.bigcase{  
+    display: flex;
+    width: 80%;
+    margin-top: 3vw;
+    justify-content: space-between;
+}
+
+#ev{
+    margin-bottom: 3vw;
+    font-size: 2.5vw;
+    font-family: 'Gochi Hand', cursive;
+}
+
+input {
+    font-family: 'Gochi Hand', cursive;
+    font-size: 2.5vw;
+    border: 0;
+    border-radius: 3px;
+    text-indent: 0.5vw;
+}
+
+footer {
+    width: 100%;
+    display: grid;
+    grid-template-rows: 40% 30% 30%;
+    grid-template-columns: 100%;
+    margin-top: 5vw; 
+    height: 30vw;
+    background-color: rgba(141,129,129,0.3);
+}
+
+footer a{
+    text-decoration: none;
+}
+
+footer div {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+}
+
+footer p{
+    font-size: 4vw;
+    justify-self: center;
+    align-self: center;
+    margin: 0;
+    font-family: "DavidsLimonade-Regular","Gochi Hand";
+}
+
+footer .logo_reseaux {
+    height: 80%;
+    width: auto;
+}
+
+@media only screen and (min-width: 768px) {
+    
+    #afficher{
+        display: grid;
+        grid-template-columns: 20% 80%;
+        margin-bottom: 1%;
+        background-color: rgba(141,129,129,0.3);
+        align-items: center;
+    }
+    
+    header{
+        display: block;
+        background-color: transparent;
+    }
+    
+    header a,#afficher:target .masquer{
+        display: none;
+    }
+    
+    nav,#afficher:target nav{
+        height: auto;
+        background-color: transparent;
+        animation: none;
+        -webkit-animation: none;
+        overflow: initial;
+    }
+
+    nav ul{
+        display: flex;
+        justify-content: space-around;
+    }
+
+    nav li a{
+        font-size: 3.3vw;
+        line-height: 3vw;
+    }
+    
+    #stand{
+        display:grid;
+        grid-template-columns: 25% 75%;
+        grid-template-areas: 
+            "img1 right"
+            "img2 right";
+        grid-row-gap: 1vw;
+        align-items: flex-start;
+        justify-items: center;
+        width: 70%;
+    }
+
+
+    #stand #david{
+        grid-area: img1;
+    }
+
+    #stand #cool{
+        display: block;
+        background-color: rgba(141,129,129,0.5);
+        grid-area: img2;
+    }
+
+    #stand p{
+        margin-block-start: 0px;
+        line-height: 2.5vw;
+        font-size: 2vw;
+        width: 80%;
+        grid-area: right;
+        align-self: center;
+    }
+    
+    #event{
+        width:80%;
+        margin: 40px auto;
+    }
+
+    #event .desc{
+        width: 100%;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: none;
+        grid-template-areas: 
+            "left right"
+            "left footer";
+        margin: 0px;
+        align-items: center;
+    }
+
+    
+    #event i{
+        font-size: 5vw;
+    }
+
+    #event iframe{
+        height: 32vw;
+        grid-area: left;
+        border-bottom-width: 0px;
+        border-right-width: 3px;
+        border-left-width: 3px;
+    }
+
+    #event .desc p{
+        font-size: 1.5vw;
+        line-height: 2vw;
+        grid-area: right;
+    }
+
+    #event button{
+        grid-area: footer;
+        height: 4vw;
+        font-size: 1.5vw;
+        font-family: 'Gochi Hand', cursive;
+        margin-bottom: 3vw;
+    }
+
+    #event .desc .numero{
+        grid-area: footer;
+    }
+
+    #inscription{
+        width:35%;
+    }
+
+    .bigcase,.bigcase input,#ev,#inscription .checkbox{ 
+        font-size: 1.3vw;
+        margin-bottom: 1vw;
+        margin-top: 0vw;
+    }
+
+    #inscription .bigcase:first-child{
+        margin-top:3vw;
+        margin-bottom: 0vw;
+    }
+
+    #inscription button{
+        height: 4vw;
+        margin-bottom: 3vw;
+        font-size: 1.5vw;
+    }
+
+    footer{
+        grid-template-columns: 30% 40% 30%;
+        grid-template-rows: 100%;
+        height: 5vw;
+    }
+
+    footer p{
+        font-size: 2vw;
+    }
+
+}
