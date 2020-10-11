@@ -22,4 +22,4 @@ Dans ce repository vous retrouverez le site réalisé, le dossier de fonts et le
 ## Contributeur :
 - https://github.com/Duffscs
 - https://github.com/Apokalypt 
-- Hervé Beteau
+- https://github.com/Hervebeteau
